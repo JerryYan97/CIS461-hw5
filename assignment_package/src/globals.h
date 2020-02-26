@@ -132,3 +132,36 @@ inline void CoordinateSystem(const Vector3f& v1, Vector3f* v2, Vector3f* v3)
 inline float DistanceSquared(const Point3f &p1, const Point3f &p2) {
     return glm::length2(p1 - p2);
 }
+
+inline float Distance(const Point3f &p1, const Point3f &p2) {
+    return glm::length(p1 - p2);
+}
+
+
+inline Float Lerp(Float t, Float v1, Float v2) {
+    return (1 - t) * v1 + t * v2;
+}
+
+inline Point3f OffsetRayOrigin(const Point3f &p, const Normal3f &n, const Vector3f &w)
+{
+    Vector3f offset = Vector3f(n);
+    if(glm::dot(w, n) < 0)
+    {
+        offset = -offset;
+    }
+    Point3f po = p + offset;
+    for (int i = 0; i < 3; ++i) {
+        if (offset[i] > 0)
+            po[i] = std::nextafter(po[i], FLT_MAX);
+            // po[i] = NextFloatUp(po[i]);
+        else if (offset[i] < 0)
+            po[i] = std::nextafter(po[i], -FLT_MAX);
+            // po[i] = NextFloatDown(po[i]);
+    }
+
+    return po;
+}
+
+inline Vector3f SphericalDirection(Float sinTheta, Float cosTheta, Float phi, const Vector3f &x, const Vector3f &y, const Vector3f &z) {
+    return sinTheta * std::cos(phi) * x + sinTheta * std::sin(phi) * y + cosTheta * z;
+}

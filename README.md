@@ -28,3 +28,15 @@ Direct Lighting:
 Naive Integrator:
 ------------
 ![](./RenderedResult/Naive_Integrator.png)
+
+Extra Credit:
+------------
+### 1. Shpere sample;
+### 2. FresnelConductor;
+### 3. Spectrum class:
+
+TIP: By using commented-out code in Navie-Integrator to get result from Specutrm calculation.
+
+![](./RenderedResult/specutrmRenderCornelBox.png)
+
+![](./RenderedResult/specutrmRenderResult.png)

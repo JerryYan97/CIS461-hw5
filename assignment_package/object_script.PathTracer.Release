@@ -38,6 +38,7 @@ INPUT(
 ./release\glassmaterial.o
 ./release\transmissivematerial.o
 ./release\specularbtdf.o
+./release\spectrum.o
 ./release\qrc_glsl.o
 ./release\qrc_sfx.o
 ./release\moc_mainwindow.o

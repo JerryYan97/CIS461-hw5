@@ -7,6 +7,7 @@
 #include <scene/materials/mattematerial.h>
 #include <scene/lights/diffusearealight.h>
 
+#include "spectrum.h"
 
 Scene::Scene()
 {}
@@ -41,6 +42,8 @@ void Scene::CreateTestScene()
     //Floor
     //Area light
     //Figure in front of light
+
+    Spectrum::Init();
 
     auto matteWhite = std::make_shared<MatteMaterial>(Color3f(1,1,1), 0, nullptr, nullptr);
     auto matteRed = std::make_shared<MatteMaterial>(Color3f(1,0,0), 0, nullptr, nullptr);

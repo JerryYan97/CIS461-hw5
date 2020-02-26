@@ -41,7 +41,8 @@ SOURCES += \
     $$PWD/scene/materials/fresnel.cpp \
     $$PWD/scene/materials/glassmaterial.cpp \
     $$PWD/scene/materials/transmissivematerial.cpp \
-    $$PWD/scene/materials/specularbtdf.cpp
+    $$PWD/scene/materials/specularbtdf.cpp \
+    $$PWD/spectrum.cpp
 
 HEADERS += \
     $$PWD/mainwindow.h \
@@ -84,4 +85,5 @@ HEADERS += \
     $$PWD/scene/materials/fresnel.h \
     $$PWD/scene/materials/glassmaterial.h \
     $$PWD/scene/materials/transmissivematerial.h \
-    $$PWD/scene/materials/specularbtdf.h
+    $$PWD/scene/materials/specularbtdf.h \
+    $$PWD/spectrum.h

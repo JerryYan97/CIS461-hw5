@@ -5,7 +5,9 @@ class LambertBRDF : public BxDF
 {
 public:
     LambertBRDF(const Color3f &R)
-        : BxDF(BxDFType(BSDF_REFLECTION | BSDF_DIFFUSE)), R(R) {}
+        : BxDF(BxDFType(BSDF_REFLECTION | BSDF_DIFFUSE)), R(R) {
+
+    }
 
     Color3f f(const Vector3f &wo, const Vector3f &wi) const;
 
