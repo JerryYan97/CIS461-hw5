@@ -21,6 +21,8 @@ FresnelDielectric:
 ------------
 ![](./RenderedResult/FresnelDielectric.png)
 
+![](./RenderedResult/FresnelDielectric10000Samples.png)
+
 Direct Lighting:
 ------------
 ![](./RenderedResult/Direct_Lighting.png)
